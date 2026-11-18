@@ -1,7 +1,8 @@
+<<<<<<< HEAD
 console.log(" ---- Rock Papper Scissors Game Designed By Gideon -----\n\n");
-
-let humanScore = 0;
-let computerScore = 0;
+=======
+console.log(" ---- Rock Paper Scissors Game Designed By Gideon -----\n\n");
+>>>>>>> e861447 (Complete console-based Rock Paper Scissors game)
 
 function getComputerChoice() {
   const randomNum = Math.random();
@@ -16,21 +17,24 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  const userChoice = prompt("Enter your choice(rock,papper or scissors):");
+  const userChoice = prompt("Enter your choice(rock,paper or scissors):");
 
   return userChoice;
 }
 
 function playGame() {
+  let humanScore = 0;
+  let computerScore = 0;
+
   function playRound(humanChoice, computerChoice) {
     const lowerHumanChoice = humanChoice.toLowerCase();
 
-    if (humanChoice === computerChoice) {
+    if (lowerHumanChoice === computerChoice) {
       console.log(`It's a tie! You both chose ${lowerHumanChoice}`);
     } else if (
-      (humanChoice === "rock" && computerChoice === "scissors") ||
-      (humanChoice === "paper" && computerChoice === "rock") ||
-      (humanChoice === "scissors" && computerChoice === "paper")
+      (lowerHumanChoice === "rock" && computerChoice === "scissors") ||
+      (lowerHumanChoice === "paper" && computerChoice === "rock") ||
+      (lowerHumanChoice === "scissors" && computerChoice === "paper")
     ) {
       console.log(`You win! ${lowerHumanChoice} beats ${computerChoice}.`);
       humanScore++;
@@ -39,7 +43,7 @@ function playGame() {
       computerScore++;
     }
   }
-  for (let i = 0; i <= 4; i++) {
+  for (let i = 0; i < 5; i++) {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
 
