@@ -43,7 +43,7 @@ function playGame() {
       computerScore++;
     }
   }
-  for (let i = 0; i < 5; i++) {
+  // for (let i = 0; i < 5; i++) {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
 
@@ -52,7 +52,7 @@ function playGame() {
     console.log(`
     Human Score: ${humanScore}\n
     Computer Score: ${computerScore}`);
-  }
+  // }
 }
 
 playGame();
